@@ -9,13 +9,13 @@ table {
 }
 
 td {
-  width: 12px;
-  height: 12px;
+  width: 22px;
+  height: 22px;
 }
 
 th {
-  height: 12px;
-  width: 12px;
+  height: 22px;
+  width: 22px;
   text-align: center;
   position: relative;
 }
@@ -37,8 +37,8 @@ th div {
 
 td div {
   border: solid black 1px;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   -webkit-print-color-adjust: exact;
 }
 
@@ -60,9 +60,17 @@ td div {
 
 .buttons {
   text-align: right;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 textarea {
   margin-bottom: 8px;
+}
+
+#table-cont{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 100vh;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }

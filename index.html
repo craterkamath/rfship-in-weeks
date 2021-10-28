@@ -2,63 +2,62 @@
 <html ng-app="lifeInWeeks">
   <head>
     <meta charset="utf-8" />
-    <title>My life in weeks</title>
+    <title>Vinayak as a Research Fellow</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.angularjs.org/1.4.8/angular.js"></script>
     <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body ng-controller="MainCtrl as ctrl" ng-cloak>
+
     <div class="container">
       <h1>{{ctrl.title}}</h1>
-      <table>
-        <tr>
-          <th></th>
-          <th class="top" ng-repeat="week in ctrl.weekNumbers track by $index">
-            <div>{{week}}</div>
-          </th>
-          </tr>
-        <tr ng-repeat="year in ctrl.years">
-          <th class="left"><div>{{year.number}}</div></th>
-          <td ng-repeat="week in year.weeks" title="{{week.date | date : 'dd.MM.yyyy'}}">
-            <div ng-attr-style="{{week.style}}"></div>
-          </td>
-        </tr>
-      </table>
-      <div class="legend col-md-6 col-md-offset-3" ng-show="ctrl.showLegend">
+      <div class="legend col-md-3" ng-show="ctrl.showLegend">
         <div ng-repeat="span in ctrl.legend">
           <div class="legend-box" ng-attr-style="{{span.style}}"></div>
           {{span.description}}
         </div>
       </div>
-      <div class="buttons hidden-print col-md-6 col-md-offset-3">
-        <button type="button" class="btn btn-primary" ng-click="ctrl.print()">
-          Print
-        </button>
+      <div id="table-cont" class="container col-md-5">
+        <table>
+          <tr>
+            <th></th>
+            <th class="top" ng-repeat="day in ctrl.dayNumbers track by $index">
+              <div>{{day}}</div>
+            </th>
+            </tr>
+          <tr ng-repeat="week in ctrl.weeks">
+            <th class="left"><div>{{week.number}}</div></th>
+            <td ng-repeat="day in week.days" title="{{day.date | date : 'dd.MM.yyyy'}} {{day.desc}}">
+              <div ng-attr-style="{{day.style}}"></div>
+            </td>
+          </tr>
+        </table>
       </div>
-      <div class="hidden-print col-md-6 col-md-offset-3">
+      <div class="hidden-print col-md-4">
         <div class="panel panel-default">
-          <div class="panel-heading">Input</div>
+          <div class="panel-heading">Create your own Calendar!</div>
           <div class="panel-body">
             <div>
               <label>Title</label>
               <input type="text" class="form-control" ng-model="ctrl.title">
             </div>
             <div>
-              <label>Birth date</label>
+              <label>Start date</label>
               <input
                   type="date"
                   class="form-control"
-                  ng-model="ctrl.birthDate"
+                  ng-model="ctrl.startDate"
                   ng-model-options="{ debounce: 1000 }">
             </div>
             <div>
-              <label>Years to show</label>
+              <label>Number of Weeks to show</label>
               <input
                   type="number"
                   class="form-control"
-                  ng-model="ctrl.totalYears"
+                  ng-model="ctrl.totalWeeks"
                   ng-model-options="{ debounce: 1000 }">
             </div>
             <div class="checkbox">
@@ -77,28 +76,19 @@
               <div class="text-danger" ng-show="ctrl.jsonError">Parse error: {{ctrl.jsonError}}</div>
             </div>
             <button class="btn btn-warning" ng-click="ctrl.clearData()">Clear</button>
-            <div>
-              <label>Example data</label>
-              <pre>{{ctrl.exampleData}}</pre>
-              <button class="btn btn-default" ng-click="ctrl.useExample()">
-                Use example
-              </button>
-            </div>
+            <button class="btn btn-warning" ng-click="ctrl.print()">Print</button>
+            <button class="btn btn-success" ng-click="ctrl.useExample()">
+              See Mine!
+            </button>
+
           </div>
         </div>
       </div>
-      <div class="buttons hidden-print col-md-6 col-md-offset-3">
-        <a href="https://github.com/PeWu/life-in-weeks">Page source on GitHub</a>
+      <div class="buttons hidden-print col-md-12">
+        <a href="https://github.com/craterkamath/rfship-in-weeks">Page source on GitHub</a>
       </div>
     </div>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-334534-12', 'auto');
-      ga('send', 'pageview');
     </script>
   </body>
 </html>
