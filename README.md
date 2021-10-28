@@ -1,6 +1,7 @@
-# Journal of the Research Fellow Stint with MSR
+![top-banner](https://64.media.tumblr.com/fa2d2801cb446c1be1ece15a8acbaa4b/tumblr_o7q1851vgH1rkes7uo2_1280.png)
+# Journal of my Research Fellow Stint with MSR
 
-This page contains important milestones(according to me) in my journey as an RF. :octocat:
+This page contains important milestones(according to me) in my journey as an RF :octocat:
 
 Site is live at [vinayakakamath.me/rfship-in-weeks](https://vinayakakamath.me/rfship-in-weeks)
 
@@ -13,13 +14,13 @@ Site is live at [vinayakakamath.me/rfship-in-weeks](https://vinayakakamath.me/rf
 
 ### TODOs
 
-- [] Add a panoramic view along with grid view
-- [] Ability to export and import json data
-- [] Color Pallete display for reference
-- [] Add support for items other than spans
+- [ ] Add a panoramic view along with grid view
+- [ ] Ability to export and import json data
+- [ ] Color Pallete display for reference
+- [ ] Add support for items other than spans
 
 
-This work is inspired rishab's teachings:
+This work is inspired by Rishab's teachings:
 > You cannot got where you want to if you don't know where you've already been
 
-![Preview of the Page](/preview.png)
+![banner](https://64.media.tumblr.com/fcfac7cfe00f8920eb813c762b9d131c/tumblr_o7q1851vgH1rkes7uo1_1280.png)
