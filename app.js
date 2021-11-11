@@ -124,7 +124,19 @@ MainCtrl = function($scope) {
       begin: '2021-10-25',
       end: '2021-11-05',
       color: color_pallete["blue"],
-      description: 'Reviwer for AISTATS'
+      description: 'Reviewer for AISTATS'
+    },
+    {
+      begin: '2021-11-08',
+      end: '2021-11-08',
+      color: color_pallete["blue"],
+      description: 'Stared working on point process model.'
+    },
+    {
+      begin: '2021-11-11',
+      end: '2021-11-11',
+      color: color_pallete["pink"],
+      description: 'Dr. Nipun Kwatra is assigned as my Buddy Mentor. Yayy!'
     },
     {
       begin: new Date().toISOString().substring(0, 10),
