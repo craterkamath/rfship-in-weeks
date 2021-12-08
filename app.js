@@ -139,6 +139,12 @@ MainCtrl = function($scope) {
       description: 'Dr. Nipun Kwatra is assigned as my Buddy Mentor. Yayy!'
     },
     {
+      begin: '2021-11-25',
+      end: '2021-12-06',
+      color: color_pallete["pink"],
+      description: 'Out of Office - Vacation to the Himalayas'
+    },
+    {
       begin: new Date().toISOString().substring(0, 10),
       end: new Date().toISOString().substring(0, 10),
       color: color_pallete["green"],
